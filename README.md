@@ -21,3 +21,32 @@
    ```bash
    git clone https://github.com/yourusername/Victorian-Curriculum-Tutor.git
    cd Victorian-Curriculum-Tutor
+Build the Docker Image:
+bash
+
+Collapse
+
+Wrap
+
+Copy
+docker build -t curriculum-tutor .
+Run Ollama (if not already running):
+bash
+
+Collapse
+
+Wrap
+
+Copy
+docker run -d -p 11434:11434 ollama/ollama:latest ollama serve
+ollama pull llama3
+Run the Container:
+bash
+
+Collapse
+
+Wrap
+
+Copy
+docker run -p 8501:8501 --network host curriculum-tutor
+Access the App: Open your browser at http://localhost:8501.
